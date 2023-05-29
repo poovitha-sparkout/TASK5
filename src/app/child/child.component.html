@@ -1,0 +1,29 @@
+<h1>user component </h1>
+
+<p>Data from parent: {{ parentData }}</p>
+<button (click)="sendNumberToParent()">Send Number to Parent</button>
+
+<button (click)="senditem()">Send Message</button>
+<h2> {{data}}!</h2>
+
+<ul>
+    <li *ngFor="let item of userData">{{ item.name}}</li>
+    </ul> 
+
+
+
+
+    
+
+
+  
+  <div>
+    <h2>Child Component</h2>
+    <ng-content></ng-content>
+  </div>
+  
+  
+  <div myDirective>
+    This element has the custom directive applied to it.
+  </div>
+  

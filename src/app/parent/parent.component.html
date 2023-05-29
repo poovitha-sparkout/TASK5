@@ -1,0 +1,23 @@
+
+<app-child (sendNumber)="pushNumber($event)"[userData]="userData"></app-child>
+
+<h3 *ngIf="numbers.length > 5">Limit reached!</h3>
+
+<ul *ngIf="numbers.length > 0">
+  <li *ngFor="let number of numbers; let i as index"[ngClass]="i >6 ?'mint':'recat'"
+     [ngStyle]="{'color': i>6 ? 'white':'black'}" 
+    >{{ number }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of userData">{{ item.name }}</li>
+</ul> 
+
+
+
+<p>parent works!</p>
+<div>
+    <h1>Parent Component</h1>
+    <ng-content></ng-content>
+  </div>
+ 

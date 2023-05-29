@@ -1,0 +1,31 @@
+
+  .setcolor{
+    color: blue;
+}
+.setcoloreven{
+    color:red;
+}
+.setcolor{
+    color: brown;
+}
+
+
+
+.custom-button {
+  
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+  
+ 
+.my-component {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

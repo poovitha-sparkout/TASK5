@@ -1,0 +1,21 @@
+.mint{
+    background-color:greenyellow;
+    font-size: 10px;
+}
+.recat{
+    background-color:red;
+    font-size: 50px;
+}
+
+.display-content{
+    margin: 10px 0 10px 0;
+}
+.log-text{
+    color: blue;
+}
+.back{
+    background-color: green;
+}
+.main{
+   color: blueviolet;
+}

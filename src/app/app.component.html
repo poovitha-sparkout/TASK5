@@ -1,0 +1,108 @@
+<router-outlet></router-outlet>
+<!-- property Binding -->
+
+
+ <h1 class="setcolor">{{ values}}</h1><br>
+ <h1 class="setcoloreven">property binding</h1>
+<button class="custom-button" (click)="value()">property binding</button>
+<br>
+<br>
+
+<!-- EVENT BINDING -->
+<h1 class="setcolor">event binding</h1>
+<input typer="text"/>
+<button  class="custom-button" (dblclick)="buttonclick($event)">event binding</button>
+  
+ <!-- string interpolation -->
+<h1>{{ name }}</h1>
+  
+
+<h2>two way binding</h2>
+  
+<input [(ngModel)]="inputValue" (input)="onInputChange()" placeholder="Type something">
+<p>{{ inputValue }}</p>  
+
+<button (click)="clickbutton($event)" class="custom-button"> new Submit</button>
+ <p>click button will true</p>
+   
+
+
+ <!-- method one will show the using ngIf to show  -->
+<h2>nIf</h2>
+<div *ngIf="method1">first method will shown</div> 
+<div *ngIf="method1">first method will disable</div> 
+
+<div *ngIf="method2">second method will shown</div> 
+<button class="custom-button" (click)="methods()" >methods</button>
+<br>
+<br>
+
+  <!-- method2 -->
+<div *ngIf="showData">show data will work</div> 
+<button class="custom-button" (click)="Data()">click</button>
+<br>
+<br>
+<div *ngIf="written">this written will shown</div>
+<button class="custom-button" (click)="write()">write click</button>
+<br>
+<br>
+<div *ngIf="spoke">if the condition is true the statemenet will speak</div>
+<button class="custom-button" (click)="speak()">click me</button>
+<br><br>
+ <!-- METHOD 3    else statement -->
+
+ <button class="custom-button" (click)="show()">
+random method 
+</button>
+<br>
+<br>
+
+  <!-- method 4 if else if chain -->
+<button class="custom-button" (click)="method()">METHOD4</button>
+  <ng-template *ngIf=" !count; twocondition">This element will be displayed if condition1 is true.
+<ng-template #oneCondition> ifCondition METHOD 4 This element AAKASHYAAA will be displayed if condition2 is true.</ng-template>
+<ng-template #twoCondition>  elseCondition METHOD 4 Part-2 This element will be displayed if neither condition1 nor condition2 is true.
+</ng-template>
+</ng-template>
+<br>
+<br>
+  <div *ngIf="!dropped"> dropeed condition will true</div>
+  <button class="custom-button" (click)="drop()">DROP</button>
+  <br>
+  <br>
+  <div *ngIf="!shell">shell click</div>
+  <button class="custom-button" (click)="shelled()">shelled click </button>  
+     
+   
+  
+ <!-- CLASS BINGING -->
+  <!-- syntax 1 -->
+<P [class]="strclass"> this is  class binding</P>
+
+<!-- style Binding -->
+<p [style.color]="'red'">style binding</p>
+
+<p [style.fontSize.px]="50">style binding fontSize</p>
+
+<h1 [style]="{
+color:'red',
+fontSize:'50px'
+}">method 2 style binding</h1>
+
+<!-- 
+input output data sharing -->
+
+
+<app-button (numberEmitter)="onNumberEmitted($event)"></app-button>
+
+<app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+
+<app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+
+
+<!-- 
+<app-parent1>
+  <p>This content is projected from the parent component into the child component.</p>
+</app-parent1> -->
+<app-parent></app-parent>
+<app-child></app-child>
